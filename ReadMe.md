@@ -1,7 +1,6 @@
 <div align="center">
 
 ![][badge-license]
-![][badge-actions]
 [![][badge-latest]][repo-latest]
 [![][badge-discord]][discord-invite]
 ![][badge-stars]
