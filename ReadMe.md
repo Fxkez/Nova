@@ -2,7 +2,6 @@
 
 ![][badge-license]
 ![][badge-actions]
-![][badge-downloads]
 [![][badge-latest]][repo-latest]
 [![][badge-discord]][discord-invite]
 ![][badge-stars]
@@ -59,9 +58,8 @@ Inherited from Fishstrap and Bloxstrap:
 
 [badge-license]:   https://img.shields.io/github/license/Fxkez/Nova?style=flat-square
 [badge-actions]:   https://img.shields.io/github/actions/workflow/status/Fxkez/Nova/ci-release.yml?branch=main&style=flat-square&label=builds
-[badge-downloads]: https://img.shields.io/github/downloads/Fxkez/Nova/latest/total?style=flat-square&color=981bfe
 [badge-latest]:    https://img.shields.io/github/v/release/Fxkez/Nova?style=flat-square&color=7a39fb
-[badge-discord]:   https://img.shields.io/discord/1388457225609150505?style=flat-square&logo=discord&logoColor=white&logoSize=auto&label=discord&color=4d3dff
+[badge-discord]:   https://img.shields.io/discord/1472529229206782075?style=flat-square&logo=discord&logoColor=white&logoSize=auto&label=discord&color=4d3dff
 [badge-stars]:     https://img.shields.io/github/stars/Fxkez/Nova?style=flat-square&color=dd9900
 
 [repo-latest]:    https://github.com/YOURUSER/nova/releases/latest
