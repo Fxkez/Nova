@@ -31,6 +31,10 @@ Nova includes everything from Fishstrap, plus:
 - **Spoofer** - clears Roblox storage and identifiers on launch for a clean
   client state
 
+![Exploits page](https://github.com/Fxkez/nova/raw/main/images/image.png)
+![Auto-execute](https://github.com/Fxkez/nova/raw/main/images/autoexecute.png)
+![Bootstrapper](https://github.com/Fxkez/nova/raw/main/images/bootstrapper.png)
+
 Inherited from Fishstrap and Bloxstrap:
 
 - Detailed server information using [RoValra][rovalra]'s API
