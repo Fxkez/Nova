@@ -15,7 +15,7 @@ Nova is a custom bootstrapper for Roblox, forked from [Fishstrap][fishstrap]
 features focused on customization, script execution, and identity spoofing.
 
 If you found any bugs, please [open an issue here][repo-new-issue] or make a new
-post in [our Discord server][discord-invite].
+post in [our Discord server][discord-invite]..
 
 > [!NOTE]
 > Nova is an application for **Windows 10 and above.** For other operating
