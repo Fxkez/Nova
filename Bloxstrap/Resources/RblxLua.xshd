@@ -1,0 +1,189 @@
+<?xml version="1.0"?>
+<!-- RblxLua highlighting, converted to AvalonEdit v2 XSHD format -->
+<SyntaxDefinition name="RblxLua" extensions=".rlua;.lua"
+                  xmlns="http://icsharpcode.net/sharpdevelop/syntaxdefinition/2008">
+
+	<!-- Dark-theme palette (VS Code Dark+ style) -->
+	<Color name="Digits"      foreground="#B5CEA8" />
+	<Color name="Comment"     foreground="#6A9955" />
+	<Color name="String"      foreground="#CE9178" />
+	<Color name="Function"    foreground="#DCDCAA" />
+	<Color name="Punctuation" foreground="#D4D4D4" />
+	<Color name="Keyword"     foreground="#569CD6" fontWeight="bold" />
+	<Color name="Table"       foreground="#4EC9B0" />
+	<Color name="ErrorWord"   foreground="#F44747" fontWeight="bold" />
+	<Color name="WarningWord" foreground="#D7BA7D" fontWeight="bold" />
+
+	<!-- Main rule set (default) -->
+	<RuleSet ignoreCase="false">
+
+		<!-- Block comment must be matched before the line comment so the line comment does not eat it -->
+		<Span color="Comment" multiline="true" ruleSet="CommentMarkerSet">
+			<Begin>--\[\[</Begin>
+			<End>\]\]</End>
+		</Span>
+
+		<!-- Line comment: begin with no end => highlights to end of line -->
+		<Span color="Comment" ruleSet="CommentMarkerSet">
+			<Begin>--</Begin>
+		</Span>
+
+		<!-- Strings -->
+		<Span color="String">
+			<Begin>'</Begin>
+			<End>'</End>
+		</Span>
+		<Span color="String">
+			<Begin>"</Begin>
+			<End>"</End>
+		</Span>
+		<!-- Long-bracket string [[ ]] (after the block comment span above) -->
+		<Span color="String" multiline="true">
+			<Begin>\[\[</Begin>
+			<End>\]\]</End>
+		</Span>
+
+		<!-- Keywords / globals (bold blue) -->
+		<Keywords color="Keyword">
+			<Word>and</Word>
+			<Word>break</Word>
+			<Word>do</Word>
+			<Word>else</Word>
+			<Word>elseif</Word>
+			<Word>end</Word>
+			<Word>false</Word>
+			<Word>for</Word>
+			<Word>function</Word>
+			<Word>if</Word>
+			<Word>in</Word>
+			<Word>local</Word>
+			<Word>nil</Word>
+			<Word>not</Word>
+			<Word>or</Word>
+			<Word>repeat</Word>
+			<Word>return</Word>
+			<Word>then</Word>
+			<Word>true</Word>
+			<Word>until</Word>
+			<Word>while</Word>
+			<Word>game</Word>
+			<Word>workspace</Word>
+			<Word>_G</Word>
+			<Word>_VERSION</Word>
+			<Word>gcinfo</Word>
+			<Word>setfenv</Word>
+			<Word>getfenv</Word>
+			<Word>newproxy</Word>
+			<Word>debug</Word>
+			<Word>ypcall</Word>
+			<Word>typeof</Word>
+			<Word>unpack</Word>
+			<Word>Enum</Word>
+			<Word>shared</Word>
+			<Word>Axes</Word>
+			<Word>BrickColor</Word>
+			<Word>CFrame</Word>
+			<Word>Color3</Word>
+			<Word>ColorSequence</Word>
+			<Word>ColorSequenceKeypoint</Word>
+			<Word>Faces</Word>
+			<Word>Instance</Word>
+			<Word>NumberRange</Word>
+			<Word>NumberSequence</Word>
+			<Word>NumberSequenceKeypoint</Word>
+			<Word>PhysicalProperties</Word>
+			<Word>Ray</Word>
+			<Word>Rect</Word>
+			<Word>Region3</Word>
+			<Word>Region3int16</Word>
+			<Word>TweenInfo</Word>
+			<Word>UDim</Word>
+			<Word>UDim2</Word>
+			<Word>Vector2</Word>
+			<Word>Vector2int16</Word>
+			<Word>Vector3</Word>
+			<Word>Vector3int16</Word>
+			<Word>delay</Word>
+			<Word>elapsedTime</Word>
+			<Word>spawn</Word>
+			<Word>tick</Word>
+			<Word>time</Word>
+			<Word>UserSettings</Word>
+			<Word>utf8</Word>
+			<Word>print</Word>
+			<Word>collectgarbage</Word>
+			<Word>type</Word>
+			<Word>tostring</Word>
+			<Word>tonumber</Word>
+			<Word>pairs</Word>
+			<Word>ipairs</Word>
+			<Word>next</Word>
+			<Word>assert</Word>
+			<Word>pcall</Word>
+			<Word>xpcall</Word>
+			<Word>error</Word>
+			<Word>select</Word>
+			<Word>dofile</Word>
+			<Word>require</Word>
+			<Word>openfile</Word>
+			<Word>loadstring</Word>
+			<Word>set</Word>
+			<Word>loadfile</Word>
+			<Word>wait</Word>
+			<Word>warn</Word>
+			<Word>rawset</Word>
+			<Word>rawget</Word>
+			<Word>rawequal</Word>
+			<Word>getmetatable</Word>
+			<Word>setmetatable</Word>
+			<Word>ssave</Word>
+			<Word>sload</Word>
+		</Keywords>
+
+		<!-- Standard library tables (plain blue) -->
+		<Keywords color="Table">
+			<Word>io</Word>
+			<Word>os</Word>
+			<Word>class</Word>
+			<Word>table</Word>
+			<Word>script</Word>
+			<Word>file</Word>
+			<Word>WinForms</Word>
+			<Word>math</Word>
+			<Word>console</Word>
+			<Word>coroutine</Word>
+			<Word>package</Word>
+			<Word>string</Word>
+		</Keywords>
+
+		<!-- Numbers (hex or decimal/float) -->
+		<Rule color="Digits">
+			\b0[xX][0-9a-fA-F]+
+			|\b\d+(\.\d+)?([eE][+-]?\d+)?
+		</Rule>
+
+		<!-- Approximation of v1 MarkPrevious: bold an identifier immediately before "(" -->
+		<Rule color="Function">
+			\b[\w_]+(?=\s*\()
+		</Rule>
+
+		<!-- Punctuation / operators (was a KeyWords block in v1) -->
+		<Rule color="Punctuation">
+			[?,.;(){}+\-/%*&lt;&gt;\^=~!|&amp;@$\[\]]
+		</Rule>
+
+	</RuleSet>
+
+	<!-- Highlights TODO/FIXME/HACK/UNDONE inside comments -->
+	<RuleSet name="CommentMarkerSet" ignoreCase="false">
+		<Keywords color="ErrorWord">
+			<Word>TODO</Word>
+			<Word>FIXME</Word>
+		</Keywords>
+		<Keywords color="WarningWord">
+			<Word>HACK</Word>
+			<Word>UNDONE</Word>
+		</Keywords>
+	</RuleSet>
+
+</SyntaxDefinition>
